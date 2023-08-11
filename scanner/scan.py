@@ -4,19 +4,6 @@ import threading
 import ipaddress
 import time , random
 
-
-def generate_ip_range(s_ip, e_ip):
-    start_ip = ipaddress.IPv4Address(s_ip)
-    end_ip = ipaddress.IPv4Address(e_ip)
-    ip_list = []
-    current_ip = start_ip
-    while current_ip <= end_ip:
-        ip_list.append(str(current_ip))
-        current_ip += 1    
-    
-    return ip_list
-
-
 def scan_port(ip,fromport=1,toport=65536):
     try:
         print("-" * 50)
